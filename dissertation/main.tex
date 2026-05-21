@@ -1,0 +1,124 @@
+\documentclass[12pt,a4paper]{report}
+
+% ---------- PACKAGES ----------
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{geometry}        % For margins
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox} % For your black/white intro boxes
+\usepackage{amsmath} % For the arrows
+\usepackage{tikz}  % For the figure 1
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric} % For the figure 1
+
+% This goes in your preamble
+\usepackage{tabularx} % for tables 5.4
+\usepackage[table]{xcolor} % for tables 5.4 & appendix tables
+\usepackage{longtable} % for tables 5.4 & appendix tables
+\usepackage{multirow} % for tables 4.1
+\usepackage{ltablex} % for appendix tables
+\keepXColumns % for appendix tables
+\setcounter{secnumdepth}{3} % fourth level heading 6.2.2.1
+\usepackage{float} % table position control esp chapter 6
+\usepackage{placeins}% images position [H]()
+
+ %%%%%%%%%%%%% for appendix tables
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{ragged2e}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Emails line breaks
+\usepackage[hyphens]{url}
+\usepackage{breakurl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Appendix B
+\newcommand{\appsubsection}[1]{
+\par\medskip
+\noindent{\color{blue!60!black}\rule{\textwidth}{0.6pt}}
+\par\vspace{0.9em}
+\noindent{\large\bfseries #1}
+\par\vspace{0.3em}
+\noindent{\color{blue!60!black}\rule{\textwidth}{0.6pt}}
+\par\medskip
+}
+
+\usepackage{microtype} % For the margin
+\sloppy % For the margin
+\newtcolorbox{chapterintro}{
+    colback=lightgray!30,      % Grey background
+    colframe=black,     % Black border
+    colupper=black,     % White text
+    sharp corners,      % No rounded edges
+    boxrule=0pt,        % No border thickness
+    fontupper=\itshape, % Italicized text
+    halign=center,      % <--- THIS CENTERS THE TEXT
+    top=4mm,            % Padding at the top
+    bottom=4mm,         % Padding at the bottom
+    left=1cm,           % Extra margin on the left inside the box
+    right=1cm           % Extra margin on the right inside the box
+}
+\usepackage{enumitem}
+
+
+\geometry{margin=1in}
+
+% ---------- Change tracking ----------
+\usepackage[draft]{changes}
+
+\definechangesauthor[name={Grace}, color=blue]{gz}
+\definechangesauthor[name={Supervisor}, color=red]{sup}
+
+%\added[id=gz]{new paragraph}
+%\deleted[id=sup]{old wording}
+%\usepackage[final]{changes}
+%\replaced{new text}{old text}
+
+
+% ---------- Page colouring for now ----------
+% 1. Load the packages needed for color management
+\usepackage{xcolor}
+\usepackage{pagecolor}
+
+% 2. Define a comfortable, soft light orange color (using a Hex code)
+\definecolor{lightorange}{HTML}{FFEEDD} 
+\definecolor{darktext}{HTML}{2D3748}
+
+% 3. Apply the background color globally
+\pagecolor{lightorange}
+
+% ---------- DOCUMENT ----------
+\begin{document}
+
+\pagenumbering{arabic}
+
+\tableofcontents
+
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+\include{chapters/chapter5}
+\include{chapters/chapter6}
+\include{chapters/chapter7}
+\include{chapters/chapter8}
+\include{chapters/chapter9}
+
+
+\include{dissertation/appendix/appendix A}
+\include{dissertation/appendix/appendix B}
+\include{dissertation/appendix/appendix C}
+\include{dissertation/appendix/appendix D}
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}

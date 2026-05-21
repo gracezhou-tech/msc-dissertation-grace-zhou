@@ -1,0 +1,240 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+%------------------------------------------------
+%                PACKAGES
+%------------------------------------------------
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tocbibind}
+
+%------------------------------------------------
+%                FORMATTING
+%------------------------------------------------
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
+%------------------------------------------------
+%                TITLE PAGE
+%------------------------------------------------
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\huge\bfseries Title of Dissertation}\\[1.5cm]
+    
+    A dissertation submitted in partial fulfillment\\
+    of the requirements for the degree of\\[0.5cm]
+    
+    {\large Master of Science (MSc) / Master of Arts (MA)}\\[0.5cm]
+    
+    in\\
+    Department Name\\
+    Faculty Name\\
+    University Name\\[1.5cm]
+    
+    by\\[0.3cm]
+    {\large Your Full Name}\\[0.5cm]
+    
+    Supervisor: Dr. Supervisor Name\\
+    Co-Supervisor (if applicable): Dr. Name\\[1cm]
+    
+    Month Year
+    
+\end{titlepage}
+
+%------------------------------------------------
+%                DECLARATION
+%------------------------------------------------
+\chapter*{Declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+
+I declare that this dissertation is my own work and has not been submitted for any other degree at any other institution. All sources have been acknowledged appropriately.
+
+\vspace{1cm}
+Signature:\\
+Date:
+
+%------------------------------------------------
+%                ABSTRACT
+%------------------------------------------------
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+This study investigates [brief problem statement]. The research explores [core themes: e.g., participatory design, digital inclusion, GIS-enabled empowerment, youth unemployment, etc.]. A mixed-method approach combining qualitative interviews, co-design workshops, and system prototyping was employed.
+
+Key findings indicate that [major contribution]. The study contributes to [theoretical contribution] and offers practical implications for [policy, ICT development, governance, etc.].
+
+Keywords: Participatory Design, Digital Inclusion, ICT4D, GIS, Socio-economic Development
+
+%------------------------------------------------
+%                ACKNOWLEDGEMENTS
+%------------------------------------------------
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+I would like to thank my supervisor, participants, family, and colleagues for their support throughout this research journey.
+
+%------------------------------------------------
+%                TABLE OF CONTENTS
+%------------------------------------------------
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+%================================================
+%                CHAPTER 1
+%================================================
+\chapter{Introduction}
+
+\section{Background}
+Provide contextual background of the research problem. Discuss socio-economic context, technological landscape, and institutional environment.
+
+\section{Problem Statement}
+Clearly define the research problem and its significance.
+
+\section{Research Aim and Objectives}
+\textbf{Aim:} To investigate how participatory design can support digital inclusion initiatives.
+
+\textbf{Objectives:}
+\begin{itemize}
+    \item To analyse current digital exclusion challenges.
+    \item To design and prototype an ICT intervention.
+    \item To evaluate the effectiveness of the intervention.
+\end{itemize}
+
+\section{Research Questions}
+\begin{enumerate}
+    \item What barriers hinder digital inclusion?
+    \item How can co-design methodologies address these barriers?
+    \item What impact does the developed system have?
+\end{enumerate}
+
+\section{Structure of the Dissertation}
+
+%================================================
+%                CHAPTER 2
+%================================================
+\chapter{Literature Review}
+
+\section{Theoretical Framework}
+Discuss relevant theories (e.g., Participatory Design, ICT4D, Socio-technical Systems Theory).
+
+\section{Digital Inclusion and Socio-Economic Development}
+Review literature on youth unemployment and digital empowerment.
+
+\section{Gaps in Existing Research}
+
+%================================================
+%                CHAPTER 3
+%================================================
+\chapter{Research Methodology}
+
+\section{Research Design}
+Explain qualitative, quantitative, or mixed-method design.
+
+\section{Participants}
+Describe sampling strategy and demographic details.
+
+\section{Data Collection Methods}
+\begin{itemize}
+    \item Interviews
+    \item Co-design Workshops
+    \item Surveys
+    \item System Testing
+\end{itemize}
+
+\section{Data Analysis}
+Describe thematic analysis, statistical analysis, or evaluation metrics.
+
+\section{Ethical Considerations}
+
+%================================================
+%                CHAPTER 4
+%================================================
+\chapter{System Design and Implementation}
+
+\section{System Architecture}
+Include diagrams:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{architecture.png}
+    \caption{Proposed System Architecture}
+\end{figure}
+
+\section{Technology Stack}
+Describe tools (e.g., GIS tools, web frameworks, databases).
+
+\section{Co-Design Process}
+Describe workshop process, stakeholder engagement.
+
+%================================================
+%                CHAPTER 5
+%================================================
+\chapter{Results and Findings}
+
+\section{Qualitative Findings}
+Present themes and participant insights.
+
+\section{Quantitative Findings}
+\begin{table}[h]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Variable & Before & After \\
+\midrule
+Digital Literacy Score & 45\% & 72\% \\
+Engagement Level & Low & High \\
+\bottomrule
+\end{tabular}
+\caption{Comparison of Key Indicators}
+\end{table}
+
+\section{Discussion}
+Interpret findings in relation to literature.
+
+%================================================
+%                CHAPTER 6
+%================================================
+\chapter{Conclusion and Recommendations}
+
+\section{Summary of Findings}
+\section{Theoretical Contributions}
+\section{Practical Implications}
+\section{Limitations}
+\section{Future Research Directions}
+
+%================================================
+%                REFERENCES
+%================================================
+\bibliographystyle{apalike}
+\bibliography{references}
+
+%================================================
+%                APPENDICES
+%================================================
+\appendix
+\chapter{Interview Guide}
+\chapter{Survey Instrument}
+\chapter{Ethics Approval Letter}
+
+\end{document}
