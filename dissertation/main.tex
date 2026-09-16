@@ -92,8 +92,20 @@
 % ---------- DOCUMENT ----------
 \begin{document}
 
-\pagenumbering{arabic}
+\input{frontmatter/cover}
 
+% FRONT MATTER
+\clearpage
+\pagenumbering{roman}
+\pagestyle{plain}
+
+%\input{frontmatter/declaration}
+%\input{frontmatter/dedication}
+\input{frontmatter/acknowledgements}
+\input{frontmatter/acronyms_abbreviations}
+\input{frontmatter/glossary}
+\input{frontmatter/preface}
+\input{frontmatter/abstract}
 \tableofcontents
 
 \listoffigures
@@ -101,6 +113,12 @@
 
 \listoftables
 \addcontentsline{toc}{chapter}{List of Tables}
+
+
+% MAIN MATTER
+\clearpage
+\pagenumbering{arabic}
+
 
 \include{chapters/chapter1}
 \include{chapters/chapter2}
