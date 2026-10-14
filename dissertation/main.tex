@@ -102,18 +102,26 @@
 %\input{frontmatter/declaration}
 %\input{frontmatter/dedication}
 \input{frontmatter/acknowledgements}
+\input{frontmatter/abstract}
 \input{frontmatter/acronyms_abbreviations}
 \input{frontmatter/glossary}
 \input{frontmatter/preface}
-\input{frontmatter/abstract}
+
+\clearpage
+\renewcommand{\contentsname}{Table of Contents}
+\phantomsection
+\addcontentsline{toc}{chapter}{Table of Contents}
 \tableofcontents
 
-\listoffigures
+\clearpage
+\phantomsection
 \addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
 
-\listoftables
+\clearpage
+\phantomsection
 \addcontentsline{toc}{chapter}{List of Tables}
-
+\listoftables
 
 % MAIN MATTER
 \clearpage
@@ -130,6 +138,11 @@
 \include{chapters/chapter8}
 \include{chapters/chapter9}
 
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{apalike}
+\bibliography{references}
 
 \include{dissertation/appendix/appendix A}
 \include{dissertation/appendix/appendix B}
@@ -141,8 +154,5 @@
 \include{dissertation/appendix/appendix F}
 \include{dissertation/appendix/appendix G}
 \include{dissertation/appendix/appendix H}
-
-\bibliographystyle{apalike}
-\bibliography{references}
 
 \end{document}
