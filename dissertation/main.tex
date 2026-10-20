@@ -89,6 +89,29 @@
 % 3. Apply the background color globally
 %\pagecolor{lightorange}
 
+%----------------Header and footer--
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+% Front matter and chapter opening pages: page number only
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[R]{\small\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% Main matter: running header and footer
+\newcommand{\mainmatterstyle}{%
+  \pagestyle{fancy}%
+  \fancyhf{}%
+  \fancyhead[L]{\small\nouppercase{\leftmark}}%
+  \fancyfoot[L]{\small Using Co-design to Discern and Overcome Barriers to Employment}%
+  \fancyfoot[R]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+
 % ---------- DOCUMENT ----------
 \begin{document}
 
@@ -128,7 +151,7 @@
 % MAIN MATTER
 \clearpage
 \pagenumbering{arabic}
-
+\mainmatterstyle %\pagestyle{fancy}
 
 \include{chapters/chapter1}
 \include{chapters/chapter2}
